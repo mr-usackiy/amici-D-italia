@@ -4,6 +4,10 @@
  const header_nav = document.querySelector('.header_nav'); */
  const scrollContent_wrap = document.querySelectorAll('.card-text');
  const scrollContent_wrap_2 = document.querySelectorAll('.s1');
+ const scrollContent_wrap_card1 = document.querySelectorAll('.card-1');
+ const scrollContent_wrap_card2 = document.querySelectorAll('.card-2');
+ const scrollContent_wrap_card3 = document.querySelectorAll('.card-3');
+ const scrollContent_wrap_card4 = document.querySelectorAll('.card-4');
  /* const scrollContent_wrap_3 = document.querySelectorAll('.content_wrap_3'); */
 
 /*  const headerFixed = () => {
@@ -52,6 +56,111 @@
 
 
 
+
+
+//grid start
+const scrollContent_wrap_card1_= () => {
+    let windowCenter = (window.innerHeight / 2) + window.scrollY;
+    scrollContent_wrap_card1.forEach(el => {
+        let scrollOffset = el.offsetTop + el.offsetHeight/20;
+        if (windowCenter >= scrollOffset) {
+            el.classList.add('wrap_animation_card1');
+        } else {
+           el.classList.remove('wrap_animation_card1');
+        }
+    })
+}
+const scrollContent_wrap_card2_= () => {
+    let windowCenter = (window.innerHeight / 2) + window.scrollY;
+    scrollContent_wrap_card2.forEach(el => {
+        let scrollOffset = el.offsetTop + el.offsetHeight/5;
+        if (windowCenter >= scrollOffset) {
+            el.classList.add('wrap_animation_card2');
+        } else {
+           el.classList.remove('wrap_animation_card2');
+        }
+    })
+}
+const scrollContent_wrap_card3_= () => {
+    let windowCenter = (window.innerHeight / 2) + window.scrollY;
+    scrollContent_wrap_card3 .forEach(el => {
+        let scrollOffset = el.offsetTop + el.offsetHeight/5;
+        if (windowCenter >= scrollOffset) {
+            el.classList.add('wrap_animation_card3');
+        } else {
+           el.classList.remove('wrap_animation_card3');
+        }
+    })
+}
+const scrollContent_wrap_card4_= () => {
+     let windowCenter = (window.innerHeight / 2) + window.scrollY;
+     scrollContent_wrap_card4.forEach(el => {
+         let scrollOffset = el.offsetTop + el.offsetHeight/110;
+         if (windowCenter >= scrollOffset) {
+             el.classList.add('wrap_animation_card4');
+         } else {
+            el.classList.remove('wrap_animation_card4');
+         }
+     })
+ }
+// grid end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* const scrollContent_wrap_3_ = () => {
      let windowCenter = (window.innerHeight / 2) + window.scrollY;
      scrollContent_wrap_3.forEach(el => {
@@ -79,6 +188,10 @@
 
  scrollContent_wrap_2_();
  scrollContent_wrap_();
+ scrollContent_wrap_card1_();
+ scrollContent_wrap_card2_();
+ scrollContent_wrap_card3_();
+ scrollContent_wrap_card4_();
  /* scrollContent_wrap_2_();
  scrollContent_wrap_3_(); */
 
@@ -86,5 +199,11 @@
      /* headerFixed(); */
      scrollContent_wrap_();
      scrollContent_wrap_2_();
+     scrollContent_wrap_card1_();
+     scrollContent_wrap_card2_();
+     scrollContent_wrap_card3_();
+     scrollContent_wrap_card4_();
+     
+
      /* scrollContent_wrap_3_(); */
  });
