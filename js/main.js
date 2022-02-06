@@ -4,6 +4,8 @@
  const header_nav = document.querySelector('.header_nav'); */
  const scrollContent_wrap = document.querySelectorAll('.card-text');
  const scrollContent_wrap_2 = document.querySelectorAll('.s1');
+ const scrollContent_wrap_4 = document.querySelectorAll('.s2');
+ const scrollContent_wrap_map = document.querySelectorAll('.map');
  const scrollContent_wrap_card1 = document.querySelectorAll('.card-1');
  const scrollContent_wrap_card2 = document.querySelectorAll('.card-2');
  const scrollContent_wrap_card3 = document.querySelectorAll('.card-3');
@@ -27,7 +29,7 @@
  }; */
 
 
-
+ //section-2 stat
  const scrollContent_wrap_ = () => {
      let windowCenter = (window.innerHeight / 2) + window.scrollY;
      scrollContent_wrap.forEach(el => {
@@ -40,8 +42,6 @@
      })
  }
 
-
-
  const scrollContent_wrap_2_ = () => {
      let windowCenter = (window.innerHeight / 2) + window.scrollY;
      scrollContent_wrap_2.forEach(el => {
@@ -53,12 +53,10 @@
          }
      })
  }
+//section-2 end
 
 
-
-
-
-//grid start
+// section-3 grid start
 const scrollContent_wrap_card1_= () => {
     let windowCenter = (window.innerHeight / 2) + window.scrollY;
     scrollContent_wrap_card1.forEach(el => {
@@ -103,9 +101,37 @@ const scrollContent_wrap_card4_= () => {
          }
      })
  }
-// grid end
+// section-3 grid end
 
 
+
+ //section-4 stat
+ const scrollContent_wrap_4_ = () => {
+    let windowCenter = (window.innerHeight / 2) + window.scrollY;
+    scrollContent_wrap_4.forEach(el => {
+       let scrollOffset = el.offsetTop + el.offsetHeight/2.5;
+        if (windowCenter >= scrollOffset) {
+            el.classList.add('wrap_animation_s4');
+        } else {
+           el.classList.remove('wrap_animation_s4');
+        }
+    })
+}
+ //section-4 end
+
+//section-5 stat
+const scrollContent_wrap_map_ = () => {
+    let windowCenter = (window.innerHeight / 2) + window.scrollY;
+    scrollContent_wrap_map.forEach(el => {
+       let scrollOffset = el.offsetTop + el.offsetHeight/2.5;
+        if (windowCenter >= scrollOffset) {
+            el.classList.add('wrap_animation_map');
+        } else {
+           el.classList.remove('wrap_animation_map');
+        }
+    })
+}
+ //section-5 end
 
 
 
@@ -187,7 +213,9 @@ const scrollContent_wrap_card4_= () => {
 
 
  scrollContent_wrap_2_();
+ scrollContent_wrap_4_(); 
  scrollContent_wrap_();
+ scrollContent_wrap_map_();
  scrollContent_wrap_card1_();
  scrollContent_wrap_card2_();
  scrollContent_wrap_card3_();
@@ -198,7 +226,9 @@ const scrollContent_wrap_card4_= () => {
  window.addEventListener('scroll', () => {
      /* headerFixed(); */
      scrollContent_wrap_();
+     scrollContent_wrap_4_();
      scrollContent_wrap_2_();
+     scrollContent_wrap_map_();
      scrollContent_wrap_card1_();
      scrollContent_wrap_card2_();
      scrollContent_wrap_card3_();
