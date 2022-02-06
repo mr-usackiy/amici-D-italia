@@ -438,7 +438,7 @@ overflow: hidden;
         }
 }
 .map{
-    transform: translateX(200%);
+    transform: translateX(100%);
     opacity: 0;
     z-index: 10;
     transition: 0.5s ease;
@@ -451,7 +451,7 @@ overflow: hidden;
 .wrap_animation_map{
     transform: translateX(0%);
     opacity: 1;
-    transition: 1.5s ease;
+    transition: 1s ease;
 }
 //section-5 end  
 
