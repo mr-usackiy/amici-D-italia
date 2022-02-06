@@ -49,11 +49,26 @@ html {
     font-weight: normal;
     font-size: 27px;
     line-height: 36px;
+        img{
+            width: 120px;
+
+        }
     
-    
+}
+.logo{
+    margin-right: 10px;;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+    transition: 1s ease;
+    &:hover{
+        transition: 1s ease;
+        background-color: rgba(255, 255, 255, 0.137);
+    }
 }
 .menu{
     width: 50%;
+    margin-right: 150px;
 }
 .items{
     display: flex;
@@ -109,7 +124,7 @@ html {
 .languages{
     width: 3%;
     position: absolute;
-    top:60px;
+    top:15px;
     right:0;
     text-decoration: none;
         a{
@@ -152,7 +167,7 @@ html {
     max-width: 1450px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 30vh;  
+    padding-top: 25vh;  
 }
 .about-container{
     position: relative;
@@ -186,7 +201,7 @@ html {
     appearance: none;
     background: #00000000;
     padding: 0.5em 4em;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.356);
     color: white;
     font-size: 1.2em;
     cursor: pointer;
@@ -233,7 +248,7 @@ html {
           transform: rotate(90deg);
       }
       &:hover{
-          transform: translateY(20px);
+          transform: translateY(10px);
           transition: 0.5s ease;
           opacity: 1;
       }

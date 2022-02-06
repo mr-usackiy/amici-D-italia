@@ -44,16 +44,32 @@ html {
 }
 .logo a{
     color: rgb(255, 255, 255);
-    font-family: Cinzel Decorative;
+    font-family: Raleway;
     font-style: normal;
     font-weight: normal;
     font-size: 27px;
     line-height: 36px;
     
-    
+        img{
+            width: 120px;
+
+        }
+        
+}
+.logo{
+    margin-right: 10px;;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 50%;
+    transition: 1s ease;
+    &:hover{
+        transition: 1s ease;
+        background-color: rgba(255, 255, 255, 0.137);
+    }
 }
 .menu{
-    width: 50%;
+    width: 40%;
+    margin-right: 150px;
 }
 .items{
     display: flex;
@@ -65,9 +81,8 @@ html {
             a{
             color: white;
             text-transform: uppercase;
-            font-family: Cinzel Decorative;
-            font-style: normal;
-            font-weight: 300;
+            font-family: Raleway;
+            font-weight: 400;
             font-size: 15px;
             line-height: 36px;
             padding: 0 5px;
@@ -109,12 +124,12 @@ html {
 .languages{
     width: 3%;
     position: absolute;
-    top:60px;
+    top:15px;
     right:0;
     text-decoration: none;
         a{
             color: #fff;
-            font-family: Cinzel Decorative;
+            font-family: Raleway;
             font-style: normal;
             font-weight: 100;
             font-size: 13px;
@@ -132,10 +147,10 @@ html {
     border-radius: 50%;
     margin-bottom: 7px;
     transition: 0.5s ease;
-    &:nth-child(2){
+    &:nth-child(1){
         border: 2px solid rgba(255, 255, 255, 0);
     }
-    &:nth-child(2):hover{
+    &:nth-child(1):hover{
         border: 2px solid white;
         transition: 0.5s ease;
     }
@@ -152,7 +167,7 @@ html {
     max-width: 1450px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 30vh;  
+    padding-top: 25vh;  
 }
 .about-container{
     position: relative;
@@ -182,12 +197,12 @@ html {
 .book-table{
     position: relative;
     margin-top: 20px;
-    font-family: Cinzel Decorative;
+    font-family: Raleway;
     appearance: none;
     background: #00000000;
-    padding: 0.5em 4em;
-    border: 2px solid white;
-    color: white;
+    padding: 0.5em 2em;
+    border: 2px solid rgba(255, 255, 255, 0.301);
+    color: rgb(255, 255, 255);
     font-size: 1.2em;
     cursor: pointer;
     outline: none;
@@ -233,7 +248,7 @@ html {
           transform: rotate(90deg);
       }
       &:hover{
-          transform: translateY(20px);
+          transform: translateY(10px);
           transition: 0.5s ease;
           opacity: 1;
       }
@@ -276,17 +291,22 @@ overflow: hidden;
     text-indent: 2em;
     display: flex;
     align-items: center;
-    color: white;
-    font-family: Cinzel Decorative;
+    color: rgb(235, 213, 213);
+    font-family: Raleway;
+    font-size: 19px;
     line-height: 2.2em;
     max-width:600px;
     height: 300px;
     background: rgba(72, 46, 46, 1);    
-    box-shadow: 21px 18px 15px rgba(0, 0, 0, 0.46);
+    box-shadow: 15px 18px 10px rgba(0, 0, 0, 0.712);
     border-radius: 22px;
     z-index: 2;
     & p{
         padding: 20px 40px;
+            span{
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+            }
     }
 }
 .wrap_animation{
@@ -474,7 +494,7 @@ background-color: black;
     align-items: center;
         h2{
             color: white;
-            font-family: Cinzel Decorative;
+            font-family: Raleway;
             line-height: 2.2em;
             font-size: 30px;
             letter-spacing: 3px;
@@ -488,12 +508,12 @@ background-color: black;
             border: none;
             border-bottom: 2px solid white;
             width: 900px;
-            font-family: Cinzel Decorative;
+            font-family: Raleway;
             line-height: 1em;
             font-size: 20px;
             color: #fff;
             &:placeholder-shown{
-                font-family: Cinzel Decorative;
+                font-family: Raleway;
                 line-height: 1em;
                 font-size: 20px;
                 letter-spacing: 3px;
@@ -506,7 +526,7 @@ background-color: black;
     border-radius: 25px;
     border: 2px solid white;
     color: #fff;
-    font-family: Cinzel Decorative;
+    font-family: Raleway;
     line-height: 1em;
     font-size: 17px;
     width: 180px;
@@ -548,7 +568,7 @@ background-color: black;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
-    font-family: Cinzel Decorative;
+    font-family: Raleway;
     line-height: 1.3em;
     font-size: 20px;
     color: #fff;

@@ -27,7 +27,11 @@
 
      });
  }; */
-
+ const form = document.getElementById('footer__submit'); //ID формы , если их много присваиваем этот id всем , можно по классу
+ form.addEventListener('submit', formSend);
+ async function formSend(e) {
+     e.preventDefault();
+ }
 
  //section-2 stat
  const scrollContent_wrap_ = () => {
