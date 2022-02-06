@@ -27,11 +27,29 @@
 
      });
  }; */
+ //запрет submit start
  const form = document.getElementById('footer__submit'); //ID формы , если их много присваиваем этот id всем , можно по классу
  form.addEventListener('submit', formSend);
  async function formSend(e) {
      e.preventDefault();
  }
+//запрет submit end
+
+
+//preloader start
+ document.body.onload = function() {
+
+    setTimeout(function() {
+        var preloader = document.getElementById('p_preloader');
+        if( !preloader.classList.contains('done') )
+        {
+         preloader.classList.add('done');
+        }
+    }, 1200);
+
+}
+//preloader end
+
 
  //section-2 stat
  const scrollContent_wrap_ = () => {
