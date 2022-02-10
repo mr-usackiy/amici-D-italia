@@ -49,6 +49,31 @@
 
 }
 //preloader end
+const popup = document.querySelector('.popup-bg');
+const popup_ = document.querySelector('.popup');
+const body = document.querySelector('.body');
+
+document.querySelector('.book_table').addEventListener('click', function() {
+    popup.classList.add('popup_animate');
+    popup_.classList.add('popup-a');
+    body.classList.add('body_fixed');
+}); 
+document.querySelector('.close__img').addEventListener('click', function() {
+    popup.classList.remove('popup_animate');
+    popup_.classList.remove('popup-a');
+    body.classList.remove('body_fixed');
+}); 
+
+    //меню
+    
+
+//popup start
+
+//popup end
+
+
+
+
 
 
  //section-2 stat
@@ -154,12 +179,6 @@ const scrollContent_wrap_map_ = () => {
     })
 }
  //section-5 end
-
-
-
-
-
-
 
 
 
