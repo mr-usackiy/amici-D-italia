@@ -869,14 +869,22 @@ background-color: black;
                 width: 25px;
             }
     }
+    .about-container{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
     .about{
-        font-size: 40px;
+        margin-left: 20px;
+        font-size: 35px;
         line-height: 1.1;
     }
     .book-table{
         margin-top: 60px;
     }
-
+    .arrow-next{
+        margin-top: 100px;
+    }
 
     //popup start
     .popup{
@@ -924,10 +932,13 @@ background-color: black;
 .wrapper-container{
 }
 .section-2__content img {
-    max-width: 90%;
+    max-width: 95%;
+    margin-top: -20px;
+    filter: drop-shadow(-5px 0px 5px black);
+    opacity: 0.7;
 }
 .card-text{
-    transform: scale(0);
+    transform: scale(1.5);
     opacity: 0;
     transition: 1s ease;
     text-indent: 2em;
@@ -949,19 +960,45 @@ background-color: black;
 .wrap_animation{
     transform: scale(1);
     opacity: 1;
-    transition: 1s ease;
+    transition: 0.5s ease;
 }
 
-///////section end
+///////section-2 end
 
 
+
+
+
+
+
+///////section-3 start
+ .section-3{
+        overflow: hidden;
+    }
+ .wrapper-cards {
+    max-width: 1080px;
+    margin: 0 auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 24% 20px 24% 20px 24% 20px 24%;
+    grid-template-columns: 24% 24% 24% 24%;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "card1 card1 card2 card3"
+        "card1 card1 card4 card4"
+        "card1 card1 card2 card3"
+        "card1 card1 card4 card4";
+        
+}   
+///////section-3 end
 
 
 ////////////////////
 
-    .section-3{
-        overflow: hidden;
-    }
+   
 }
 
 
