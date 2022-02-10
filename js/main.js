@@ -1,5 +1,5 @@
  //анимация при скроллинеге 
-
+ window.onload = function () {
 /*  const down = document.querySelector('.section-2');
  const header_nav = document.querySelector('.header_nav'); */
  const scrollContent_wrap = document.querySelectorAll('.card-text');
@@ -53,7 +53,7 @@ const popup = document.querySelector('.popup-bg');
 const popup_ = document.querySelector('.popup');
 const body = document.querySelector('.body');
 
-document.querySelector('.book_table').addEventListener('click', function() {
+document.querySelector('.book-table').addEventListener('click', function() {
     popup.classList.add('popup_animate');
     popup_.classList.add('popup-a');
     body.classList.add('body_fixed');
@@ -90,9 +90,9 @@ document.querySelector('.close__img').addEventListener('click', function() {
  }
 
  const scrollContent_wrap_2_ = () => {
-     let windowCenter = (window.innerHeight / 2) + window.scrollY;
+     let windowCenter = (window.innerHeight / 1) + window.scrollY;
      scrollContent_wrap_2.forEach(el => {
-         let scrollOffset = el.offsetTop + el.offsetHeight/2.5;
+         let scrollOffset = el.offsetTop + el.offsetHeight/4;
          if (windowCenter >= scrollOffset) {
              el.classList.add('wrap_animation--2');
          } else {
@@ -278,3 +278,4 @@ const scrollContent_wrap_map_ = () => {
 
      /* scrollContent_wrap_3_(); */
  });
+ }

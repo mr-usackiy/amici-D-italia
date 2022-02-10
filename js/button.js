@@ -1,4 +1,5 @@
-document.querySelector('.book-table').onmousemove = (e) => {
+
+  document.querySelector('.book-table').onmousemove = (e) => {
 
     const x = e.pageX - e.target.offsetLeft
     const y = e.pageY - e.target.offsetTop
@@ -8,7 +9,7 @@ document.querySelector('.book-table').onmousemove = (e) => {
     
   }
 
-  document.querySelector('.footer__submit').onmousemove = (e) => {
+  document.querySelector('#footer__submit').onmousemove = (e) => {
 
     const x = e.pageX - e.target.offsetLeft
     const y = e.pageY - e.target.offsetTop
