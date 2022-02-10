@@ -80,7 +80,7 @@ document.querySelector('.close__img').addEventListener('click', function() {
  const scrollContent_wrap_ = () => {
      let windowCenter = (window.innerHeight / 2) + window.scrollY;
      scrollContent_wrap.forEach(el => {
-        let scrollOffset = el.offsetTop + el.offsetHeight/2.5;
+        let scrollOffset = (el.offsetTop/1.1) + el.offsetHeight/2.5;
          if (windowCenter >= scrollOffset) {
              el.classList.add('wrap_animation');
          } else {
@@ -118,7 +118,7 @@ const scrollContent_wrap_card1_= () => {
 const scrollContent_wrap_card2_= () => {
     let windowCenter = (window.innerHeight / 2) + window.scrollY;
     scrollContent_wrap_card2.forEach(el => {
-        let scrollOffset = (el.offsetTop/1.1) + el.offsetHeight/5;
+        let scrollOffset = (el.offsetTop/1.05) + el.offsetHeight/55;
         if (windowCenter >= scrollOffset) {
             el.classList.add('wrap_animation_card2');
         } else {
@@ -170,7 +170,7 @@ const scrollContent_wrap_card4_= () => {
 const scrollContent_wrap_map_ = () => {
     let windowCenter = (window.innerHeight / 2) + window.scrollY;
     scrollContent_wrap_map.forEach(el => {
-       let scrollOffset = el.offsetTop + el.offsetHeight/2.5;
+       let scrollOffset = (el.offsetTop/1.1) + el.offsetHeight/2.5;
         if (windowCenter >= scrollOffset) {
             el.classList.add('wrap_animation_map');
         } else {
