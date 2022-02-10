@@ -975,24 +975,30 @@ background-color: black;
  .section-3{
         overflow: hidden;
     }
+   
  .wrapper-cards {
-    max-width: 1080px;
+    max-width: 767px;
     margin: 0 auto;
+    justify-content: center;
     grid-column-gap: 2%;
     grid-row-gap: 2%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 24% 20px 24% 20px 24% 20px 24%;
-    grid-template-columns: 24% 24% 24% 24%;
+    -ms-grid-columns: 22% 2% 22% 2% 22% 2% 22%;
+    grid-template-columns: 22% 22% 22% 22%;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     grid-template-areas:
-        "card1 card1 card2 card3"
-        "card1 card1 card4 card4"
-        "card1 card1 card2 card3"
-        "card1 card1 card4 card4";
+        "card4 card4 card4 card4"
+        "card4 card4 card4 card4"
+        "card1 card1 card3 card3"
+        "card1 card1 card3 card3"
+        "card2 card2 card2 card2";
         
 }   
+.wrap_animation_card3{
+    height: 100%;
+}
 ///////section-3 end
 
 

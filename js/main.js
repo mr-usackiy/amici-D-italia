@@ -118,7 +118,7 @@ const scrollContent_wrap_card1_= () => {
 const scrollContent_wrap_card2_= () => {
     let windowCenter = (window.innerHeight / 2) + window.scrollY;
     scrollContent_wrap_card2.forEach(el => {
-        let scrollOffset = el.offsetTop + el.offsetHeight/5;
+        let scrollOffset = (el.offsetTop/1.1) + el.offsetHeight/5;
         if (windowCenter >= scrollOffset) {
             el.classList.add('wrap_animation_card2');
         } else {
@@ -138,9 +138,9 @@ const scrollContent_wrap_card3_= () => {
     })
 }
 const scrollContent_wrap_card4_= () => {
-     let windowCenter = (window.innerHeight / 2) + window.scrollY;
+     let windowCenter = (window.innerHeight/1) + window.scrollY;
      scrollContent_wrap_card4.forEach(el => {
-         let scrollOffset = el.offsetTop + el.offsetHeight/110;
+         let scrollOffset = (el.offsetTop) + el.offsetHeight/2;
          if (windowCenter >= scrollOffset) {
              el.classList.add('wrap_animation_card4');
          } else {
