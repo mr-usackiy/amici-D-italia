@@ -1,5 +1,17 @@
  //анимация при скроллинеге 
  window.onload = function () {
+
+    //preloader start
+        setTimeout(function() {
+            var preloader = document.getElementById('p_preloader');
+            if( !preloader.classList.contains('done') )
+            {
+            preloader.classList.add('done');
+            }
+        }, 1200);
+    //preloader end
+
+
 /*  const down = document.querySelector('.section-2');
  const header_nav = document.querySelector('.header_nav'); */
  const scrollContent_wrap = document.querySelectorAll('.card-text');
@@ -36,19 +48,7 @@
 //запрет submit end
 
 
-//preloader start
- document.body.onload = function() {
 
-    setTimeout(function() {
-        var preloader = document.getElementById('p_preloader');
-        if( !preloader.classList.contains('done') )
-        {
-         preloader.classList.add('done');
-        }
-    }, 1200);
-
-}
-//preloader end
 const popup = document.querySelector('.popup-bg');
 const popup_ = document.querySelector('.popup');
 const body = document.querySelector('.body');
