@@ -34,6 +34,14 @@ window.onload = function () {
             }
         })
     }, 500)
+    setTimeout(function () {
+        var wrap_card2 = document.querySelectorAll('.back');
+        wrap_card2.forEach(function (el) {
+            if (!el.classList.contains('cards_animation')) {
+                el.classList.add('cards_animation');
+            }
+        })
+    }, 500)
     //////////////////////// loading end ///////////////////////////////////////
 
 
@@ -55,6 +63,7 @@ window.onload = function () {
     var wrap_card5 = document.querySelector('#open_card5');
     var wrap_card6 = document.querySelector('#open_card6');
     var wrap_card7 = document.querySelector('#open_card7');
+    var wrap_back = document.querySelector('.back');
     var close_btn = document.querySelectorAll('.close');
     var card1P = document.querySelector('.card-1__popup');
     var card2P = document.querySelector('.card-2__popup');
@@ -73,6 +82,7 @@ window.onload = function () {
         wrap_card5.classList.remove('cards_animation--1-4');
         wrap_card6.classList.remove('cards_animation--0-7');
         wrap_card7.classList.remove('cards_animation');
+        wrap_back.classList.remove('cards_animation');
     }
 
 
@@ -118,6 +128,7 @@ window.onload = function () {
             wrap_card5.classList.toggle('cards_animation--1-4');
             wrap_card6.classList.toggle('cards_animation--0-7');
             wrap_card7.classList.toggle('cards_animation');
+            wrap_back.classList.toggle('cards_animation');
             card_all.forEach((el) => {
                 el.classList.remove("scale1");
             });
