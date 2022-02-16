@@ -16,14 +16,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
-    <!-- <div id="p_preloader" class="preloader">
+    <div id="p_preloader" class="preloader">
         <div class="load">
             <div class="inload"></div>
         </div>
-    </div> -->
+    </div>
 
     <div class="intro-container">
         <header class="header">
@@ -35,10 +44,10 @@
                 </div>
                 <div class="menu">
                     <ul class="items">
-                        <li><a href="#">История</a></li>
-                        <li><a href="#">Команда</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Меню</a></li>
+                        <li><a href="#section-2">История</a></li>
+                        <li><a href="#section-4">Команда</a></li>
+                        <li><a href="#footer">Контакты</a></li>
+                        <li><a href="../menu/menu.html">Меню</a></li>
                     </ul>
                 </div>
                 <div class="languages">
@@ -53,7 +62,35 @@
         </header>
         <section class="intro">
             <!-- popup booking  start  -->
-            
+            <div class="popup-bg">
+                <div class="popup">
+                    <div class="close">
+                        <a href="#" class="close__img">
+                            <img src="images/close.png" alt="" srcset="">
+                        </a>
+                    </div>
+                    <form class="popup__wrapper">
+                        <h1>Забронируйте столик</h1>
+                        <div class="first">
+                            <input type="date" name="" id="">
+                            <input type="time" name="" id="">
+                        </div>
+                        <div class="second">
+                            <p>Введите Ваш номер</p>
+                            <input type="text" placeholder="+7-999-999-99-99">
+                        </div>
+                        <div class="foth">
+                            <p>Введите Ваш email</p>
+                            <input type="text" placeholder="lalala@mail.ru">
+                        </div>
+                        <button id="footer__submit" class="footer__submit" class="popup_btn" type="submit">
+                            <span>Забронировать</span>
+                        </button>
+                    </form>
+                </div>
+
+
+            </div>
             <!-- popup booking  end  -->
 
             <div class="about-container">
@@ -96,7 +133,7 @@
             </div>
         </div>
     </section>
-    <section class="section-4">
+    <section id="section-4" class="section-4">
         <div class="wrapper-container">
             <div class="section-2__content">
                 <img src="images/s2.jpg" class="s2" alt="director">
@@ -128,7 +165,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="wrapper-container">
             <div class="footer__wraper">
                 <h2>Подпишитесь на вкусные обновления</h2>
