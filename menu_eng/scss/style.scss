@@ -1,0 +1,1095 @@
+body {
+    margin: none;
+}
+
+%cost {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.5s ease;
+    opacity: 0;
+    z-index: 10000;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 84%;
+    max-height: 90%;
+    border-radius: 12px;
+    h1 {
+        z-index: 2;
+        color: rgb(255, 255, 255);
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 32px;
+        font-weight: bold;
+    }
+}
+%cost_li {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    transform: translate(100%, 50%);
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: Raleway;
+    transition: 1s ease;
+    opacity: 0;
+}
+%cost_p {
+    width: 90%;
+    display: block;
+    color: rgb(184, 181, 181);
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: Raleway;
+}
+%btn_next{
+    position: absolute;
+    top: 50%;
+    right:5%;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    &:hover{
+        transform: translateX(5px);
+    }
+}
+.back {
+    transform: translate(-200%);
+    text-align: center;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+    width: 3%;
+    img {
+        transform: rotate(180deg) translateX(0px);
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        transition: 1s ease;
+    }
+    a {
+        font-family: Cinzel Decorative;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        text-decoration: none;
+        font-size: 20px;
+        color: rgba(240, 248, 255, 0.192);
+        transition: 0.7s ease;
+    }
+    &:hover {
+        width: 8%;
+        transition: 1.7s ease;
+        transform: translateX(10px);
+        img {
+            opacity: 1;
+            transition: 1s ease;
+            transform: rotate(180deg) translateX(12px);
+        }
+        a {
+            color: rgb(240, 248, 255);
+            transition: 0.7s ease;
+            filter: drop-shadow(-5px 0px 5px white);
+        }
+    }
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(48, 26, 26), rgb(0, 0, 0));
+    height: 100vh;
+    width: 100vw;
+    color: wheat;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Cinzel Decorative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 36px;
+    transition: 0.4s ease;
+}
+
+.card {
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    &:hover img {
+        transform: scale(1.1);
+        transition: 1s ease;
+    }
+    &:hover div {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.096), rgb(19, 3, 3));
+        opacity: 0.3;
+        transition: 1s ease;
+    }
+}
+.card-1 {
+    grid-area: card1;
+    position: relative;
+    &::after {
+        content: "risotto";
+        color: aliceblue;
+        font-size: 1.4em;
+        position: absolute;
+        margin: auto;
+        bottom: 45%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(255, 255, 255);
+        transition: 0.8s ease;
+        font-size: 1.7em;
+        transform: translate(3vw, 22vh);
+    }
+}
+.card-2 {
+    grid-area: card2;
+    position: relative;
+    &::after {
+        content: "desserts";
+        color: aliceblue;
+        font-size: 1.4em;
+        position: absolute;
+        margin: auto;
+        bottom: 53%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(0, 0, 0);
+        transition: 0.8s ease;
+        font-size: 1.7em;
+        transform: translate(-15vw, -4vh);
+    }
+}
+.card-3 {
+    grid-area: card3;
+    position: relative;
+    &::after {
+        content: "pizza";
+        color: aliceblue;
+        font-size: 1.4em;
+        position: absolute;
+        margin: auto;
+        bottom: 45%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(0, 0, 0);
+        transition: 0.8s ease;
+        font-size: 1.9em;
+        transform: translateY(-4vh);
+        letter-spacing: 16px;
+    }
+}
+.card-4 {
+    grid-area: card4;
+    position: relative;
+    &::after {
+        content: "paste";
+        color: aliceblue;
+        font-size: 1.4em;
+        position: absolute;
+        margin: auto;
+        bottom: 45%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(252, 252, 252);
+        transition: 0.8s ease;
+        font-size: 1.7em;
+        transform: translateY(9vh);
+    }
+}
+.card-5 {
+    grid-area: card5;
+    position: relative;
+    &::after {
+        content: "bruschetta";
+        color: aliceblue;
+        font-size: 1.1em;
+        position: absolute;
+        margin: auto;
+        bottom: 45%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(0, 0, 0);
+        transition: 0.8s ease;
+        font-size: 1.2em;
+        transform: translateY(-2vh);
+    }
+}
+.card-6 {
+    grid-area: card6;
+    position: relative;
+    &::after {
+        content: "salads";
+        color: aliceblue;
+        font-size: 1.4em;
+        position: absolute;
+        margin: auto;
+        bottom: 45%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(255, 255, 255);
+        transition: 0.8s ease;
+        font-size: 1.5em;
+        transform: translate(-4vw, 9vh);
+    }
+}
+.card-7 {
+    grid-area: card7;
+    position: relative;
+    &::after {
+        content: "snacks";
+        color: aliceblue;
+        font-size: 1.4em;
+        position: absolute;
+        margin: auto;
+        bottom: 45%;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        transition: 1s ease;
+    }
+    &:hover::after {
+        color: rgb(0, 0, 0);
+        transition: 0.8s ease;
+        font-size: 1.7em;
+        transform: translate(-6vw, 5vh);
+    }
+}
+///////cards_animation start ///////////////////////////////////////////////////
+.cards_animation--0-7 {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.7s ease;
+}
+.cards_animation {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s ease;
+}
+.cards_animation--1-4 {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.7s ease;
+}
+.zindex {
+    z-index: 4;
+}
+
+///////cards_animation end ///////////////////////////////////////////////////
+
+.menu__grid {
+    grid-template: auto;
+    padding: 10px 10px;
+    max-width: 100%;
+    height: 90%;
+    margin: 0 auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "card1 card1 card6 card6 card5 card4"
+        "card1 card1 card7 card7 card3 card3"
+        "card2 card2 card2 card2 card3 card3";
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s ease;
+    }
+}
+
+.filter {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(131, 45, 45, 0.233), rgb(0, 0, 0), rgb(12, 1, 1));
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+/////////////////////open card start////////////////////////////////////////////
+
+.open-card--bg {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    backdrop-filter: blur(5px);
+    transition: 0.5s ease;
+    background: rgba(0, 0, 0, 0.178);
+}
+.card-1__popup {
+    @extend %cost;
+    background-image: url(../images/rizoto.jpg);
+}
+.item1 { 
+    width: 80%;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        width: 80%;
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.5s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "450 руб";
+        @extend %cost_li;
+    }
+    li:nth-child(2):after {
+        content: "600 руб";
+        @extend %cost_li;
+    }
+    li:nth-child(3):after {
+        content: "660 руб";
+        @extend %cost_li;
+    }
+    li:nth-child(4):after {
+        content: "670 руб";
+        @extend %cost_li;
+    }
+    li:nth-child(5):after {
+        content: "850 руб";
+        @extend %cost_li;
+    }
+    li:nth-child(6):after {
+        content: "990 руб";
+        @extend %cost_li;
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+}
+}
+.card-2__popup {
+    background-image: url(../images/desert.jpg);
+    @extend %cost;
+}
+.item2 {
+    margin-left: 27%;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    li {
+
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.6s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "300 руб";
+        @extend %cost_li;
+        transform: translate(200%, 0%);
+  
+    }
+    li:nth-child(2):after {
+        content: "310 руб";
+        @extend %cost_li;
+        transform: translate(200%, 0%);
+  
+    }
+    li:nth-child(3):after {
+        content: "320 руб";
+        @extend %cost_li;
+        transform: translate(200%, 0%);
+  
+    }
+    li:nth-child(4):after {
+        content: "330 руб";
+        @extend %cost_li;
+        transform: translate(200%, 0%);
+  
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+        margin-bottom: 20px;
+    }
+}
+.card-3__popup {
+    background-image: url(../images/pizza.jpg);
+    @extend %cost;
+}
+.item3 {
+    z-index: 2;
+    width: 700px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        width: 80%;
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.7s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "430 руб";
+        @extend %cost_li;
+    
+    }
+    li:nth-child(2):after {
+        content: "730 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "600 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "700 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "900 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "990 руб";
+        @extend %cost_li;
+  
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+    }
+}
+.item3--page_2{
+    li:nth-child(1):after {
+        content: "650 руб";
+        @extend %cost_li;
+    
+    }
+    li:nth-child(2):after {
+        content: "650 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "740 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "400 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "650 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "900 руб";
+        @extend %cost_li;
+  
+    }
+}
+.item3--page_3{
+    li:nth-child(1):after {
+        content: "600 руб";
+        @extend %cost_li;
+    
+    }
+    li:nth-child(2):after {
+        content: "990 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "730 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "670 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "700 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "900 руб";
+        @extend %cost_li;
+  
+    }
+}
+.item3--page_4{
+    li:nth-child(1):after {
+        content: "830 руб";
+        @extend %cost_li;
+    
+    }
+    li:nth-child(2):after {
+        content: "930 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "780 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "770 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "890 руб";
+        @extend %cost_li;
+  
+    }
+}
+.card-4__popup {
+    background-image: url(../images/pasta.jpg);
+    @extend %cost;
+  
+}
+.item4 {
+    z-index: 2;
+    width: 700px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        width: 80%;
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.7s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "220 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "300 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "340 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "340 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "460 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "490 руб";
+        @extend %cost_li;
+  
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+    }
+}
+.item4--page_2{
+    li:nth-child(1):after {
+        content: "540 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "620 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "700 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "800 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "840 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "990 руб";
+        @extend %cost_li;
+  
+    }
+}
+.item4--page_3{
+    li:nth-child(1):after {
+        content: "1100 руб";
+        @extend %cost_li;
+  
+    }
+}
+.card-5__popup {
+    background-image: url(../images/brusket.jpg);
+    @extend %cost;
+  
+}
+.item5 {
+    z-index: 2;
+    width: 700px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        width: 80%;
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.7s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "300 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "470 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "540 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "560 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "770 руб";
+        @extend %cost_li;
+  
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+    }
+}
+.card-6__popup {
+    background-image: url(../images/salat.jpg);
+    @extend %cost;
+  
+}
+.item6 {
+    z-index: 2;
+    width: 700px;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        width: 80%;
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.7s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "350 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "390 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "410 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "450 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "470 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "500 руб";
+        @extend %cost_li;
+  
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+    }
+}
+.item6--page_2{
+    li:nth-child(1):after {
+        content: "580 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "570 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "630 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "680 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "680 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "690 руб";
+        @extend %cost_li;
+  
+    }
+}
+.item6--page_3{
+    li:nth-child(1):after {
+        content: "690 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "700 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "730 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "780 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "1000 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "1300 руб";
+        @extend %cost_li;
+  
+    }
+}
+.card-7__popup {
+    background-image: url(../images/zakus.jpg);
+    @extend %cost;
+  
+}
+.item7 {
+    width: 80%;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li {
+        line-height: normal;
+        font-size: 0.6em;
+        font-family: Raleway;
+        position: relative;
+        transition: 0.7s ease;
+        &:hover {
+            filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+            transition: 0.3s ease;
+        }
+    }
+    li:nth-child(1):after {
+        content: "900 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(2):after {
+        content: "1100 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(3):after {
+        content: "1400 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(4):after {
+        content: "2000 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(5):after {
+        content: "2000 руб";
+        @extend %cost_li;
+  
+    }
+    li:nth-child(6):after {
+        content: "3000 руб";
+        @extend %cost_li;
+  
+    }
+    li:hover:after {
+        visibility: visible;
+        transition: 0.5s ease;
+        opacity: 1;
+    }
+
+    p {
+        @extend %cost_p;
+    }
+}
+.filter-menu {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.795), rgba(68, 48, 48, 0.548), rgba(0, 0, 0, 0.733));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 102%;
+    backdrop-filter: blur(5px);
+}
+.scale1 {
+    transform: scale(1);
+    opacity: 1;
+    color: white;
+    transition: 1s ease;
+}
+.card__items {
+    transform: translateX(15%);
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+    width: 700px;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.close {
+    z-index: 3;
+    margin-top: 10px;
+}
+.close__img {
+    text-decoration: none;
+    transition: 1s ease;
+    height: 25px;
+    width: 25px;
+    img {
+        transition: 0.5s ease;
+        width: 25px;
+        &:hover {
+            transform: rotate(360deg);
+            transition: 1s ease;
+            filter: drop-shadow(0px 0px 5px white);
+        }
+    }
+}
+/////////////////////open card end////////////////////////////////////////////
+
+.scroll_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;  
+    width: 5000px;
+    transition: 1s ease;
+}
+
+.navigation{
+    width: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: 0.5s ease;
+        img{
+            transition: 0.5s ease;
+        }
+        img:hover{
+            filter: drop-shadow( 0px 0px 5px white);
+            transition: 0.5s ease;
+        }
+}
+.next{
+    @extend %btn_next;
+}
+.next4{
+    @extend %btn_next;
+}
+.next6{
+    @extend %btn_next;
+}
+.exit{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: inline;
+    transform: rotate(180deg);
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    &:hover{
+        transform:rotate(180deg) translateX(5px);
+    }
+}
