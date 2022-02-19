@@ -93,7 +93,7 @@ window.onload = function () {
     const scrollContent_menu_ = () => {
         let windowCenter = (window.innerHeight / 2) + window.scrollY;
         scrollContent_menu.forEach(function (el) {
-            let scrollOffset = (el.offsetTop) + el.offsetHeight / 2.5;
+            let scrollOffset = (el.offsetTop) + el.offsetHeight / 15;
             var wrap_card05s = document.querySelectorAll('.delay--05s');
             var wrap_card1s = document.querySelectorAll('.delay--1s');
             var wrap_card2s = document.querySelectorAll('.delay--2s');

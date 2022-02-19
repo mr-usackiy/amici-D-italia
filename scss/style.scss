@@ -1846,11 +1846,18 @@ input {
         transform: rotate(-90deg) translate(-19px, -1px);
     }
     .card-5::after {
-        transform: rotate(-90deg) translate(-19px,-1px);
+        transform: rotate(-90deg) translate(-19px, -1px);
     }
 }
 @media (max-width: 767px) {
     ///////header start
+    .section-2__content {
+        margin-bottom: 150px;
+    }
+    .intro-container {
+        overflow: hidden;
+    }
+
     .header__container {
         justify-content: center;
     }
@@ -1896,7 +1903,7 @@ input {
         margin-top: 60px;
     }
     .arrow-next {
-        margin-top: 100px;
+        margin-top: 35px;
     }
 
     //popup start
@@ -1978,35 +1985,95 @@ input {
     ///////section-2 end
 
     ///////section-3 start
-    .section-3 {
-        overflow: hidden;
-        padding-bottom: 250px;
+    .card-1:hover::after {
+        transform: rotate(-45deg) translate(-10px, 2px);
     }
-    .wrapper-cards {
-        max-width: 767px;
+    .card-1::after {
+        transform: rotate(-45deg) translate(-10px, 2px);
+    }
+    .card-2:hover::after {
+        transform: rotate(-45deg) translate(-10px, 2px);
+    }
+    .card-2::after {
+        transform: rotate(-45deg) translate(-10px, 2px);
+    }
+    .card-5:hover::after {
+        transform: rotate(-45deg) translate(-10px, 2px);
+    }
+    .card-5::after {
+        transform: rotate(-45deg) translate(-10px, 2px);
+    }
+    .card__items {
+        transform: translateX(0%);
+        margin-left: 1%;
+    }
+    .item2 {
+        margin-left: 6%;
+    }
+    .item1 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .item2 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .item3 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .item4 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .item5 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .item6 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .item7 p {
+        width: 60%;
+        font-size: 14px;
+    }
+    .next7,
+    .next6,
+    .next4,
+    .next {
+        position: absolute;
+        top: 105%;
+        right: 5%;
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+    }
+    .exit {
+        position: absolute;
+        top: 105%;
+    }
+    .section-3 {
+        padding-bottom: 150px;
+    }
+    .menu__grid {
+        padding: 10px 10px;
+        max-width: 100%;
+        height: 90%;
         margin: 0 auto;
-        justify-content: center;
-        grid-column-gap: 2%;
-        grid-row-gap: 2%;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
         display: -ms-grid;
         display: grid;
-        -ms-grid-columns: 22% 2% 22% 2% 22% 2% 22%;
-        grid-template-columns: 22% 22% 22% 22%;
-        -ms-grid-rows: auto;
+        grid-template-columns: 14% 14% 15% 14% 14% 15%;
         grid-template-rows: auto;
         grid-template-areas:
-            "card4 card4 card4 card4"
-            "card4 card4 card4 card4"
-            "card1 card1 card3 card3"
-            "card1 card1 card3 card3"
-            "card2 card2 card2 card2";
+            "card1 card1 card6 card6 card5 card5"
+            "card1 card1 card6 card6 card3 card3"
+            "card1 card1 card4 card4 card3 card3"
+            "card2 card2 card4 card4 card3 card3";
     }
-    .wrap_animation_card3 {
-        height: 100%;
-    }
-    .wrap_animation_card1 {
-        height: 100%;
-    }
+
     ///////section-3 end
 
     ///////section-4 start
