@@ -1883,7 +1883,9 @@ input {
         }
     }
     .languages {
-        display: none;
+    display: flex;
+    top: 100%;
+    right: 55%;
     }
     ///////header end
 
