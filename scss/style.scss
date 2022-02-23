@@ -525,8 +525,8 @@ input {
 %cost_li {
     position: absolute;
     visibility: hidden;
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: 0px;
     transform: translate(100%, 50%);
     display: block;
     color: rgb(255, 255, 255);
@@ -534,6 +534,51 @@ input {
     font-family: Cinzel Decorative;
     transition: 1s ease;
     opacity: 0;
+}
+@media(max-width:281px){
+    %cost_li {
+        position: absolute;
+        visibility: hidden;
+        top: 10px;
+        right: 10px;
+        transform: translate(100%, 50%);
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: Cinzel Decorative;
+        transition: 1s ease;
+        opacity: 0;
+    }
+}
+@media(max-width:768px){
+    %cost_li {
+        position: absolute;
+        visibility: hidden;
+        top: 10px;
+        right: 100px;
+        transform: translate(100%, 50%);
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: Cinzel Decorative;
+        transition: 1s ease;
+        opacity: 0;
+    }
+}
+@media(max-width:1110px){
+    %cost_li {
+        position: absolute;
+        visibility: hidden;
+        top: 10px;
+        right: 0px;
+        transform: translate(100%, 50%);
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-family: Cinzel Decorative;
+        transition: 1s ease;
+        opacity: 0;
+    }
 }
 %cost_p {
     width: 90%;
@@ -1730,6 +1775,7 @@ input {
 
 //////////////////////////////////////////////////////////////////////mobile main page start///////////////////////////////////////////////////////////////////////////
 @media (max-width: 1110px) {
+   
     .menu__2{
         overflow: hidden;
     }
@@ -1753,34 +1799,42 @@ input {
         grid-template-columns: 14% 15% 16% 16% 16% 16%;
     }
     .item1 li {
-        width: 70%;
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
     .item2 li {
-        width: 70%;
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
     .item3 li {
-        width: 70%;
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
-    .item4li {
-        width: 70%;
+    .item4 li {
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
     .item5 li {
-        width: 70%;
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
     .item6 li {
-        width: 70%;
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
     .item7 li {
-        width: 70%;
+        margin-left: 20px;
+        width: 346px;
         font-size: 0.5em;
     }
     .about {
+        margin-left: 20px;
         font-size: 32px;
     }
     iframe {
@@ -2172,7 +2226,11 @@ input {
             font-weight: bold;
         }
     }
-
+    .item3--page_2 li,.item3--page_3 li,.item3--page_4, li.item3--page_5 li,.item4--page_2 li,.item4--page_3 li,.item6--page_2 li,.item6--page_3 li,.item6--page_4 li{
+        margin-left: 20px;
+        width: 346px;
+    }
+    
     ///////footer start
 
     ///////footer end
