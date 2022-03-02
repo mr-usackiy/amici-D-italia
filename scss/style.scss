@@ -565,6 +565,11 @@ input {
         transition: 1s ease;
         opacity: 0;
     }
+    .item3 li{
+        margin-left: 20px;
+        width: 322px;
+    }
+  
 }
 
 @media(max-width:281px){
@@ -1777,12 +1782,12 @@ input {
 
 //////////////////////////////////////////////////////////////////////mobile main page start///////////////////////////////////////////////////////////////////////////
 @media (max-width: 1110px) {
-   
+    
     .menu__2{
         overflow: hidden;
     }
     .close {
-        top: 10px;
+        top: 0px;
         right: 15px;
         position: absolute;
         z-index: 3;
@@ -1895,6 +1900,9 @@ input {
     }
 }
 @media (max-width: 871px) {
+    .navigation{
+        display: none;
+    }
     iframe {
         width: 420px;
         margin: 0 auto;
@@ -2228,9 +2236,14 @@ input {
             font-weight: bold;
         }
     }
-    .item3--page_2 li,.item3--page_3 li,.item3--page_4, li.item3--page_5 li,.item4--page_2 li,.item4--page_3 li,.item6--page_2 li,.item6--page_3 li,.item6--page_4 li{
+    .item3--page_2 li,.item3--page_3 li,.item3--page_5 li,.item4--page_2 li,.item4--page_3 li,.item6--page_2 li,.item6--page_3 li,.item6--page_4 li{
         margin-left: 20px;
         width: 346px;
+    }
+    
+    .item3 li{
+        margin-left: 20px;
+        width: 322px;
     }
     
     ///////footer start

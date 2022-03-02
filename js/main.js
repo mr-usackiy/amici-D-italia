@@ -54,7 +54,7 @@ window.onload = function () {
             let scrollOffset = (el.offsetTop / 1.1) + el.offsetHeight / 2.5;
             if (windowCenter >= scrollOffset) {
                 el.classList.add('wrap_animation');
-            } 
+            }
         })
     }
 
@@ -64,7 +64,7 @@ window.onload = function () {
             let scrollOffset = el.offsetTop + el.offsetHeight / 4;
             if (windowCenter >= scrollOffset) {
                 el.classList.add('wrap_animation--2');
-            } 
+            }
         })
     }
     //section-2 end
@@ -122,8 +122,8 @@ window.onload = function () {
             }
         })
     }
-//////////////////////// loading end ///////////////////////////////////////
-//////////////////////card wrap function start//////////////////////////////
+    //////////////////////// loading end ///////////////////////////////////////
+    //////////////////////card wrap function start//////////////////////////////
     function rem() {
         wrap_card1.classList.remove('cards_animation--0-7');
         wrap_card2.classList.remove('cards_animation--0-7');
@@ -133,8 +133,8 @@ window.onload = function () {
         wrap_card6.classList.remove('cards_animation--0-7');
         wrap_card7.classList.remove('cards_animation--0-7');
     }
-//////////////////// card wrap function end /////////////////////////////////
-//////////////////////// cards unwrapping on click start ////////////////////
+    //////////////////// card wrap function end /////////////////////////////////
+    //////////////////////// cards unwrapping on click start ////////////////////
     document.getElementById('open_card1').onclick = function () {
         rem();
         card1P.classList.toggle('scale1');
@@ -163,8 +163,8 @@ window.onload = function () {
         rem();
         card7P.classList.toggle('scale1');
     }
-////////////////////////cards unwrapping on click end/////////////////////////
-///////////////////buttton close start////////////////////////////////////////
+    ////////////////////////cards unwrapping on click end/////////////////////////
+    ///////////////////buttton close start////////////////////////////////////////
     close_btn.forEach((i) => {
         i.addEventListener("click", function (event) {
             event.preventDefault();
@@ -302,15 +302,96 @@ window.onload = function () {
             let scrollOffset = (el.offsetTop / 1.1) + el.offsetHeight / 2.5;
             if (windowCenter >= scrollOffset) {
                 el.classList.add('wrap_animation_map');
-            } 
+            }
         })
     }
     //section-5 end
 
+    ////////////////////////////////////////// swipe start /////////////////////////////////////////////////////////
+    var logBlock = document.querySelectorAll('.scroll_wrap');
+    logBlock.forEach(function (el) {
+        el.addEventListener('touchstart', handleTouchStart, false);
+        el.addEventListener('touchmove', handleTouchMove, false);
+
+    })
 
 
 
+    let x1 = null;
+    let y1 = null;
 
+    function handleTouchStart(event) {
+        const firstTouch = event.touches[0];
+        x1 = firstTouch.clientX;
+        y1 = firstTouch.clientY;
+
+    }
+    /* 3467 */
+    function handleTouchMove(event) {
+        /*  if (document.getElementById('open_card3').classList.contains('scale1')) {
+             var b = number_item_3;
+         }
+         if (document.getElementById('open_card4').classList.contains('scale1')) {
+             var b = number_item_4;
+         }
+         if (document.getElementById('open_card6').classList.contains('scale1')) {
+             var b = number_item_6;
+         }
+         if (document.getElementById('open_card7').classList.contains('scale1')) {
+             var b = number_item_7;
+         } */
+        if (!x1 || !y1) {
+            return false;
+        }
+
+
+
+        let x2 = event.touches[0].clientX;
+        let y2 = event.touches[0].clientY;
+        let xDiff = x2 - x1;
+        let yDiff = y2 - y1;
+
+
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+            if (xDiff > 0) {
+                offset = offset + 100;
+                var b = document.querySelectorAll('.scroll_wrap');
+                b.forEach(function (el) {
+                    el.style.left = offset + "%"
+                    if (offset >= 100) {
+                        el.style.left = 0 + "%"
+                        offset = 0;
+                    }
+                })
+            } else {
+                offset = offset - 100;
+                var a = document.querySelectorAll('.scroll_wrap');
+                var b = 0;
+
+                a.forEach(function (el) {
+                    el.style.left = offset + "%";
+                    if (offset <= (-100) * number_item_3) {
+
+                        el.style.left = (-100 * number_item_3) + 100 + "%";
+                        offset = (-number_item_3 * 100) + 100;
+
+                    }
+                })
+
+            }
+        } else {
+            if (yDiff > 0) {
+                console.log("down");
+            } else {
+                console.log("top");
+            }
+        }
+        x1 = null;
+        y1 = null;
+
+    }
+    ////////////////////////////////////////// swipe end /////////////////////////////////////////////////////////
 
 
 
