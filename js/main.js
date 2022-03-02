@@ -326,71 +326,61 @@ window.onload = function () {
         y1 = firstTouch.clientY;
 
     }
-    /* 3467 */
-    function handleTouchMove(event) {
-        /*  if (document.getElementById('open_card3').classList.contains('scale1')) {
-             var b = number_item_3;
-         }
-         if (document.getElementById('open_card4').classList.contains('scale1')) {
-             var b = number_item_4;
-         }
-         if (document.getElementById('open_card6').classList.contains('scale1')) {
-             var b = number_item_6;
-         }
-         if (document.getElementById('open_card7').classList.contains('scale1')) {
-             var b = number_item_7;
-         } */
-        if (!x1 || !y1) {
-            return false;
-        }
+    /* if (document.getElementById('card-3__popup').classList.contains('scale1')) { */
+        function handleTouchMove(event) {
 
-
-
-        let x2 = event.touches[0].clientX;
-        let y2 = event.touches[0].clientY;
-        let xDiff = x2 - x1;
-        let yDiff = y2 - y1;
-
-
-
-        if (Math.abs(xDiff) > Math.abs(yDiff)) {
-            if (xDiff > 0) {
-                offset = offset + 100;
-                var b = document.querySelectorAll('.scroll_wrap');
-                b.forEach(function (el) {
-                    el.style.left = offset + "%"
-                    if (offset >= 100) {
-                        el.style.left = 0 + "%"
-                        offset = 0;
-                    }
-                })
-            } else {
-                offset = offset - 100;
-                var a = document.querySelectorAll('.scroll_wrap');
-                var b = 0;
-
-                a.forEach(function (el) {
-                    el.style.left = offset + "%";
-                    if (offset <= (-100) * number_item_3) {
-
-                        el.style.left = (-100 * number_item_3) + 100 + "%";
-                        offset = (-number_item_3 * 100) + 100;
-
-                    }
-                })
-
+            if (!x1 || !y1) {
+                return false;
             }
-        } else {
-            if (yDiff > 0) {
-                console.log("down");
-            } else {
-                console.log("top");
-            }
-        }
-        x1 = null;
-        y1 = null;
 
-    }
+
+
+            let x2 = event.touches[0].clientX;
+            let y2 = event.touches[0].clientY;
+            let xDiff = x2 - x1;
+            let yDiff = y2 - y1;
+
+
+
+            if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                if (xDiff > 0) {
+                    offset = offset + 100;
+                    var b = document.querySelectorAll('.scroll_wrap');
+                    b.forEach(function (el) {
+                        el.style.left = offset + "%"
+                        if (offset >= 100) {
+                            el.style.left = 0 + "%"
+                            offset = 0;
+                        }
+                    })
+                } else {
+                    offset = offset - 100;
+                    var a = document.querySelectorAll('.scroll_wrap');
+                    var b = 0;
+
+                    a.forEach(function (el) {
+                        el.style.left = offset + "%";
+                        if (offset <= (-100) * number_item_3) {
+                            el.style.left = (-100 * number_item_3) + 100 + "%";
+                            offset = (-number_item_3 * 100) + 100;
+
+                        }
+                    })
+
+                }
+            } else {
+                if (yDiff > 0) {
+                    console.log("down");
+                } else {
+                    console.log("top");
+                }
+            }
+            x1 = null;
+            y1 = null;
+        }
+    /* }else{
+        console.log('gkggk')
+    } */
     ////////////////////////////////////////// swipe end /////////////////////////////////////////////////////////
 
 
