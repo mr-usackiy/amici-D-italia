@@ -1,15 +1,14 @@
 //анимация при скроллинеге 
 window.onload = function () {
 
-    /* //preloader start
+
         setTimeout(function() {
             var preloader = document.getElementById('p_preloader');
             if( !preloader.classList.contains('done') )
             {
             preloader.classList.add('done');
             }
-        }, 1200);
-    //preloader end */
+        }, 1500);
 
 
     /*  const down = document.querySelector('.section-2');
